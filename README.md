@@ -13,6 +13,7 @@ It covers data ingestion, cleaning, transformation, and dimensional modeling to 
 [CRM_DATA](dataset/source_crm)
 
 [ERP_DATA](dataset/source_erp)
+
 The dataset includes CRM data (customers, products, and sales transactions) and ERP data (customer demographics, location, and product categories).
 Key fields include customer_id, product_id, order_date, quantity, price, sales_amount, gender, birthdate, country, category, and subcategory, which are used for data integration, transformation, and star schema modeling in the warehouse.
 
@@ -24,4 +25,4 @@ Key fields include customer_id, product_id, order_date, quantity, price, sales_a
 ## ⭐ Star Schema Design
 The Gold Layer uses a Star Schema design with a central fact table (fact_sales) connected to dimension tables (dim_customers and dim_products).
 This structure enables efficient analytical queries, better performance, and simplified reporting for business insights.
-[Star_Schema](Docs/Star_Schema_Structure.png)
+![Star_Schema](Docs/Star_Schema_Structure.png)
