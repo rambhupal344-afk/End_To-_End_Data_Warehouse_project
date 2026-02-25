@@ -3,19 +3,17 @@
 ## Introduction  🚀
 This project showcases the design and implementation of a modern Data Warehouse using SQL Server and Medallion Architecture (Bronze, Silver, Gold).
 It covers data ingestion, cleaning, transformation, and dimensional modeling to create a scalable and analytics-ready data solution suitable for BI and reporting use cases.
+#  🏗️ Project Architecture
+![project Architecture](Docs/Architecture.png)
+1. **Bronze Layer**: Stores raw data as-is from the source systems. Data is ingested from CSV Files into SQL Server Database.
+2. **Silver Layer**: This layer includes data cleansing, standardization, and normalization processes to prepare data for analysis.
+3. **Gold Layer**: Houses business-ready data modeled into a star schema required for reporting and analytics.
 
-![project Architecture](architecture.jpg.png)
+## 📖 Dataset Used
+The dataset includes CRM data (customers, products, and sales transactions) and ERP data (customer demographics, location, and product categories).
+Key fields include customer_id, product_id, order_date, quantity, price, sales_amount, gender, birthdate, country, category, and subcategory, which are used for data integration, transformation, and star schema modeling in the warehouse.
 
-## Technologies Used
-1. Microsoft Azure
-   - Azure Data Factory
-   - Synapse Analyitcs
-   - Azure blob Storage
-2. Dashboard - Power BI
-3. Pyspark
-
-## Dataset Used
-The  dataset includes athletes data with columns athlete_id, name, country, discipline, events data with event_id, event_name, sport, event_date, and medals data with country, gold, silver, bronze, and total.
-##  Transformations & Scripting 
-1. [ETL script](Transformation.ipynb)
-2. [Sql_quires](Sql_query.sql)
+##  ETL
+1. [Bronze_layer](Script/bronze_layer.sql)
+2. [silver_layer](Script/silver_layer.sql)
+3. [gold_layer](Script/gold_layer.sql)
