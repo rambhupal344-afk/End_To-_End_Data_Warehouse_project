@@ -13,7 +13,12 @@ It covers data ingestion, cleaning, transformation, and dimensional modeling to 
 The dataset includes CRM data (customers, products, and sales transactions) and ERP data (customer demographics, location, and product categories).
 Key fields include customer_id, product_id, order_date, quantity, price, sales_amount, gender, birthdate, country, category, and subcategory, which are used for data integration, transformation, and star schema modeling in the warehouse.
 
-##  ETL
-1. [Bronze_layer](Script/bronze_layer.sql)
-2. [silver_layer](Script/silver_layer.sql)
-3. [gold_layer](Script/gold_layer.sql)
+##  📂 ETL
+1. [Bronze_layer](Script/bronze_layer.sql) ---Creating and Loading the data
+2. [silver_layer](Script/silver_layer.sql) ---Data cleaning/manuplating
+3. [gold_layer](Script/gold_layer.sql)     ---Creating views for analysis
+
+## ⭐ Star Schema Design
+The Gold Layer uses a Star Schema design with a central fact table (fact_sales) connected to dimension tables (dim_customers and dim_products).
+This structure enables efficient analytical queries, better performance, and simplified reporting for business insights.
+[Star_Schema](Docs/)
